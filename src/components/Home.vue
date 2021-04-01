@@ -30,7 +30,7 @@ export default {
     return {
       tableHeaders: [
         {
-          text: 'Date/Time',
+          text: 'Date and Time',
           value: 'date_time',
           align: 'start',
           width: 170
