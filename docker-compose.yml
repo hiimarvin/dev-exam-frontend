@@ -10,7 +10,7 @@ services:
       - '${VUE_APP_PORT:-8080}:8080'
     networks:
       - sail
-    entrypoint: 'bash -c "npm install && npm run serve"'
+    entrypoint: 'bash -c "npm install -d && npm run serve -d"'
     healthcheck:
       test: 'curl localhost:8080'
 
