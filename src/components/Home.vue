@@ -11,7 +11,7 @@
           block
           outlined
           @click="addRow"
-        >Add Row</v-btn>
+        >Ping</v-btn>
       </template>
       <!-- JSON prettify HTTP Response -->
       <template v-slot:item.http_res="{ item }" >
