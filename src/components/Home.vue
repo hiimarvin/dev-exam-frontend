@@ -1,12 +1,11 @@
 <template>
   <v-container>
     <v-data-table
+      class="elevation-1"
       :headers="tableHeaders"
       :items="tableData"
       :items-per-page="5"
-      :loading="isTableLoading"
-      hide-default-footer
-      disable-pagination>
+      :loading="isTableLoading">
       <template v-slot:top>
         <v-btn
           block
@@ -14,10 +13,9 @@
           @click="addRow"
         >Add Row</v-btn>
       </template>
+      <!-- JSON prettify HTTP Response -->
       <template v-slot:item.http_res="{ item }" >
-        <pre>
-          {{ item.http_res }}
-        </pre>
+        <pre>{{ JSON.stringify(JSON.parse(item.http_res), null, 2) }}</pre>
       </template>
     </v-data-table>
   </v-container>
