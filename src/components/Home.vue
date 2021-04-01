@@ -56,9 +56,9 @@ export default {
         });
     },
     addRow() {
+      this.isTableLoading = true;
       axios.get('http://localhost:8081/datetime')
         .then(response => {
-          this.isTableLoading = true;
           return axios.post('http://localhost:8082/api/httpRes/store', {
             'date_time': response.data.date_time,
             'http_res': JSON.stringify(response)
